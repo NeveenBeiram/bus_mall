@@ -2,13 +2,13 @@
 'use strict';
 
 // Create an event listener so that when the delete link is clicked, the removeItemFromCart method is invoked.
-const table = document.getElementById('cart');
-table.addEventListener('click', removeItemFromCart);
+const table = document.getElementById( 'cart' );
+table.addEventListener( 'click', removeItemFromCart );
 let cart;
 
 function loadCart() {
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  cart = new Cart(cartItems);
+  const cartItems = JSON.parse( localStorage.getItem( 'cart' ) ) || [];
+  cart = new Cart( cartItems );
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
@@ -33,7 +33,7 @@ function showCart() {
 
 }
 
-function removeItemFromCart(event) {
+function removeItemFromCart( event ) {
 
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   // TODO: Save the cart back to local storage
